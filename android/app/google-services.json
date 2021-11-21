@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "641444408172",
+    "firebase_url": "https://monitoreoagricola-b8d55-default-rtdb.firebaseio.com",
+    "project_id": "monitoreoagricola-b8d55",
+    "storage_bucket": "monitoreoagricola-b8d55.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:641444408172:android:8c057f4dcec632e4cfa149",
+        "android_client_info": {
+          "package_name": "com.example.agricola"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "641444408172-ivlirja4vml4hdascasvs2b3l4jlbh0m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6740IZMiV6cWnCrEMgKZG0BAj8R7bMo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "641444408172-ivlirja4vml4hdascasvs2b3l4jlbh0m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
