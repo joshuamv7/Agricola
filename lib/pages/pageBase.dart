@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
-import 'package:mailer/mailer.dart';
+
+// import 'package:mailer/mailer.dart';
+// import 'package:mailer/smtp_server.dart';
 
 class pageBase extends StatefulWidget {
   @override
@@ -31,36 +33,22 @@ class _pageBaseState extends State<pageBase> {
     });
   }
 
-  Future<void> send() async {
-    String username = 'agricolaproyecto1@gmail.com';
-    String password = 'Proyecto123!';
+  // Future<void> send() async {
+  //   final email = 'agricolaproyecto1@gmail.com';
+  //   final token = '';
+  //   final smtpServer = gmailSaslXoauth2(email, token);
 
-    final smtpServer = gmail(username, password);
-    // Use the SmtpServer class to configure an SMTP server:
-    // final smtpServer = SmtpServer('smtp.domain.com');
-    // See the named arguments of SmtpServer for further configuration
-    // options.
-
-    // Create our message.
-    final message = Message()
-      ..from = Address(username, 'Your name')
-      ..recipients.add('destination@example.com')
-      ..ccRecipients.addAll(['destCc1@example.com', 'destCc2@example.com'])
-      ..bccRecipients.add(Address('bccAddress@example.com'))
-      ..subject = 'Test Dart Mailer library :: 😀 :: ${DateTime.now()}'
-      ..text = 'This is the plain text.\nThis is line 2 of the text part.'
-      ..html = "<h1>Test</h1>\n<p>Hey! Here's some HTML content</p>";
-
-    try {
-      final sendReport = await send(message, smtpServer);
-      print('Message sent: ' + sendReport.toString());
-    } on MailerException catch (e) {
-      print('Message not sent.');
-      for (var p in e.problems) {
-        print('Problem: ${p.code}: ${p.msg}');
-      }
-    }
-  }
+  //   final message = Message()
+  //     ..from = Address(email, "agricola")
+  //     ..recipients = ["joshua.moreira7@gmail.com"]
+  //     ..subject = "hello"
+  //     ..text = "holiwis";
+  //   try {
+  //     await (message, smtpServer);
+  //   } on MailerException catch (e) {
+  //     print(e);
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +65,7 @@ class _pageBaseState extends State<pageBase> {
         Container(
           margin: EdgeInsets.only(top: 30),
         ),
-        ElevatedButton(onPressed: send, child: Text("go")),
+        // ElevatedButton(onPressed: send, child: Text("go")),
         Container(
           width: 200,
           height: 200,
